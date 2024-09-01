@@ -1,0 +1,347 @@
+
+Tecnicatura Universitaria en Programación
+Programación I
+
+
+Guía de Ejercicios N°3 - Ciclo For
+Sugerimos resolver esta guía una vez hayan leído la “Guía de Errores de Diagrama Frecuentes, Parte 3” que encuentran en el Aula Virtual.
+
+#
+Ejercicio
+
+
+
+
+
+
+
+
+1
+Hacer un programa para mostrar por pantalla los números del 1 al 10.
+Importante: El programa no tiene ningún ingreso de datos.
+
+
+
+
+2
+Hacer un programa para mostrar por pantalla los números del 1 al 20 salteando de a 3 valores. Es decir: 1, 4, 7, 10, 13, 16, 19.
+Importante: El programa no tiene ningún ingreso de datos.
+
+
+
+
+3
+Hacer un programa para mostrar por pantalla los números del 20 al 1 en orden decreciente.
+Importante: El programa no tiene ningún ingreso de datos.
+
+
+
+
+4
+Hacer un programa para que el usuario ingrese un número positivo y luego se muestren por pantalla los números entre el 1 y el número ingresado por el usuario. 
+Ejemplo. Si el usuario ingresa 15, se mostrarán los números entre el 1 y el 15.
+
+
+
+
+5
+Hacer un programa para que el usuario ingrese dos números y luego el programa muestre por pantalla los números entre el menor y el mayor de ambos. 
+Ejemplo, si el usuario ingresa 3 y 15, se mostrarán los números entre el 3 y el 15 y si el usuario ingresa 25 y 8, se mostrarán los números entre el 8 y el 25.
+
+
+
+
+6
+Hacer un programa para ingresar un N valor que indica la cantidad de números que componen una lista y luego solicitar se ingresen esos N números. Se pide informar cuantos son positivos
+Ejemplo A: Se ingresa como N el valor 5, y luego se ingresa: 10, -3, 2, 5, 4. Se listará:  Cantidad de Positivos: 4
+Ejemplo B: Se ingresa como N el valor 6, y luego se ingresa: -10, -3, -2, 0, -5, -4. Se listará: Cantidad de Positivos: 0
+
+
+
+
+7
+Hacer un programa para ingresar una lista de 10 números, luego informar cuántos son positivos, cuántos son negativos, y cuántos iguales a cero.
+Para resolver este ejercicio sugerimos resolver antes el TP2 EJ 11.
+
+
+
+
+8
+Hacer un programa para ingresar una lista de 10 números, luego informar el porcentaje de positivos, negativos, y  ceros.
+
+
+
+
+9
+Hacer un programa para ingresar una lista de 10 números, luego informar el máximo.
+Ejemplo A: 5, 10, 20, 8, 25, 13, 35, -8, -5, 20. Se listará Máximo 35.
+Ejemplo B: 5, 10, 20, 8, 55, 13, 55, -8, -5, 20. Se listará Máximo 55.
+Ejemplo C: -15, -10, -20, -8, -25, -13, -55, -6, -55, -20. Se listará Máximo -6
+El tercer ejemplo demuestra que NO SIEMPRE en una lista de números el máximo es un positivo.
+Para resolver este ejercicio sugerimos resolver antes el TP2 EJ 9 y TP2 EJ 10.
+
+
+
+
+10
+Hacer un programa para ingresar una lista de 10 números enteros, luego informar el máximo y la posición del máximo en la lista. En caso de “empates” considerar la primera aparición.
+Ejemplo A: 5, -10, 20, 8, 25, 13, 35, -8, -5, 20. Listará Máximo 35 Posición 7.
+Ejemplo B: 5, -10, 2, 8, 25, 13, 55, -8, 55, 9. Listará Máximo 55 Posición 7.
+Ejemplo C: -15, -10, -20, -8, -25, -13, -55, -6, -55, -20. Listará Máximo -6 Posición 8.
+El tercer ejemplo demuestra que NO SIEMPRE en una lista de números el máximo es un positivo.
+
+
+
+
+
+
+
+
+11
+Hacer un programa para ingresar una lista de 10 números, luego informar el máximo y el mínimo.
+Ejemplo A: 10, 20, -5, 30,-15, 5, 42, 0, 22, -13. Se listará Máximo 42 Mínimo -15.
+Ejemplo B: 10, 20, 5, 30, 15, 5, 42, 8, 22, 13. Se listará Máximo 42 Mínimo 5.
+Ejemplo C: -10, -20, -5, -30, -15, -12, -42, -8, -22, -13. Se listará Máximo -5 Mínimo -42.
+Observe que los tres ejemplos dejan en claro que la suposición de que el máximo “seguramente” es un positivo y el mínimo “seguramente” es un negativo, queda totalmente descartada.
+
+
+
+
+12
+Hacer un programa para ingresar una lista de 10 números e informar el máximo de los negativos y el mínimo de los positivos. 
+Ejemplo: 5, 8, 12, 2, -10, 15, -20, 8, -3, 24. Máximo Negativo -3. Mínimo Positivo 2.
+
+
+
+
+13
+Dada una lista de 10 números enteros informar cual es el máximo de los pares. 
+Ejemplo A: 2, 10, 20, 8, 25, 13, 36, - 8, -5, 20 se informa máximo: 36
+Ejemplo B 5, -13, 23, 81, -55, -13, 55, 4, 15 ,-20 Se informa máximo: 4
+Ejemplo C: -5, -13, -20, -8, -55, -13, -55, -14, -15, -20 se informa máximo: -8
+
+
+
+
+14
+Dada una lista de 7 números enteros informar cual es el primer, el segundo, el anteúltimo y el último número impar ingresado.
+Ejemplo 8, 4, -5, 7, 9, 18, 5 se informa: Primer impar: -5, Segundo impar: 7, Anteúltimo impar: 9 y Último impar: 5.
+
+
+
+
+15
+Hacer un programa para ingresar una lista de 8 números y luego informar si todos están ordenados en forma creciente. En caso de haber dos números “empatados” considerarlos como crecientes. 
+Por ejemplo si la lista fuera: 
+Ejemplo A: -10, 1, 5, 7, 15, 18, 20, 23 se emitirá un cartel: “Conjunto Ordenado” Ejemplo B: 10, 10, 15, 20, 25, 25, 28, 33 se emitirá un cartel: “Conjunto Ordenado” Ejemplo C: 10, 1, 15, 7, -15, 18, 20, 23 se emitirá un cartel: “Conjunto No Ordenado”
+Para resolver este ejercicio sugerimos resolver antes el TP2 EJ 17.
+
+
+
+
+16
+Hacer un programa para ingresar 5 números, luego informar los 2 mayores valores ingresados, aclarando cual es el máximo y cuál el que le sigue. 
+Ejemplo A: 10, 8, 12, 14, 3 el resultado será 14 y 12. 
+Ejemplo B: 14, 8, 12, 14 ,3 el resultado será 14 y 14.
+Ejemplo C: -4, -8, -12, -20, -10 el resultado será -4 y -8
+Ejemplo D: 100, 20, 5, -15, 70, el resultado será 100 y 70. 
+Ejemplo E: -100, -20, -5, 15, -70, el resultado será 15 y -5. 
+
+Se recomienda probar el diagrama que vaya a desarrollar con todos los ejemplos, en particular el Ejemplo D, en el cual el máximo de la lista aparece en el primer lugar y que si no se tiene precaución puede llevar a resultados como 100 como máximo y 100 como segundo máximo. ¡ESO ES INCORRECTO! El resultado debe ser 100 y 70.
+
+
+
+
+
+17
+Hacer un programa para ingresar un número entero y luego informar todos los divisores de ese número. 
+Ejemplo A. Si se ingresa 6 se listarán: 1, 2, 3 y 6
+Ejemplo B. Si se ingresa 9 se listarán: 1, 3 y 9.
+Ejemplo 3. Si se ingresa 11 se listarán 1 y 11.
+
+
+
+
+18
+Hacer un programa para ingresar un número entero y luego informar todos los divisores pares de ese número. 
+Ejemplo A. Si se ingresa 6 se listará: 2 y 6. Ejemplo B. Si se ingresa 8 se listará: 2, 4 y 8. Ejemplo C. Si se ingresa 11 no se listará nada.
+
+
+
+
+19
+Hacer un programa para ingresar un número entero y luego informar la cantidad de divisores de ese número. 
+Ejemplo A. Si se ingresa 6 se listará: 4 divisores. 
+Ejemplo B. Si se ingresa 9 se listará: 3 divisores. 
+Ejemplo C. Si se ingresa 11 se listará: 2 divisores.
+
+
+
+
+20
+Se define a un número entero como primo cuando tiene solamente dos divisores. Ejemplo A: 2, 7, 11, 13 son números primos, ya que todos tienen solamente dos divisores. 
+Ejemplo B: 6 no es primo, pues tiene 4 divisores (1, 2, 3 y 6) 
+Ejemplo C: 9 no es primo, pues tiene 3 divisores (1, 3 y 9) 
+
+Hacer un programa para ingresar un número y luego informar con un cartel aclaratorio si el mismo es un número primo o es número no primo.
+
+
+
+
+21
+Se define como divisores propios de un número entero a aquellos que son sus divisores excluyendo al número en sí mismo. 
+Ejemplo A. Los divisores propios del 4 son: 1 y 2. 
+Ejemplo B. Los divisores propios del 12 son: 1, 2, 3, 4 y 6.
+
+Se define a un número como perfecto cuando la suma de todos sus divisores propios coincide con el número en sí mismo. 
+Ejemplo A: 6 es número perfecto pues 1+2+3=6 
+Ejemplo B: 28 es número perfecto pues 1+2+4+7+14=28 
+Ejemplo C: 12 no es número perfecto pues 1+2+3+4+6=16 
+
+Hacer un programa para ingresar un número y luego informar con un cartel aclaratorio si el mismo es un número perfecto o no es número perfecto
+
+
+
+
+22
+Dada una lista de 7 números enteros informar el primer número par ingresado y su ubicación en la lista y el último de los números primos y su ubicación en la lista. Ejemplo A: 7, 4, 5, 6, 9, 13, 10 se informa: 
+Primer número par: 4 ubicación 2. Último primo: 13 ubicación 6. 
+Ejemplo B: 9, 5, 21, 9, 13, 15, 6 se informa: 
+Primer número par: 6 ubicación 7. Último primo: 13 ubicación 5.
+
+
+
+
+23
+Dada una lista de 10 números enteros informar la cantidad de duplas de números impares que se hayan ingresado consecutivamente. 
+Ejemplo A: 12, 3, 5, 7, 6, 9, 13, 10, 7, -5. 
+
+En esta lista las duplas son: 3:5, 5:7, 9:13, 7:-5 por lo tanto se informará que hay 4 duplas de números impares ingresados consecutivamente.
+
+Ejemplo B: 3, 5, 7, 10, 3, 5, 7, 10, 3, 5.
+En esta lista las duplas son: 3:5, 5:7, 3:5, 5:7, 3:5 por lo tanto se informará que hay 5 duplas de números impares ingresados consecutivamente.
+
+Aclaración: Sólo hay que listar la cantidad de duplas de impares. No hay que mostrar cómo están compuestas las duplas de números.
+
+
+
+
+24
+Hacer un programa que permita ingresar el sueldo de 10 empleados y determine:
+El sueldo máximo.
+El sueldo mínimo.
+El sueldo promedio.
+Cantidad de sueldos mayores a $50000.
+
+
+
+
+25
+Hacer un programa que permita ingresar el legajo y sueldo de 10 empleados y determine:
+El legajo del empleado con mayor sueldo
+
+
+
+
+26
+Hacer un programa que muestre los números primos entre el 1 y el 10000. El usuario no debe ingresar nada en este programa.
+
+
+
+
+27
+Una estación meteorológica registró una muestra climática de los últimos 15 días. Por cada día registró:
+Número de día (entero)
+Temperatura (float)
+Milímetros de lluvia (float)
+Visibilidad en km (float)
+
+Hay un registro por cada día. La información se encuentra ordenada por día. Se pide calcular e informar:
+El número del día que se haya registrado la temperatura máxima.
+La amplitud térmica de todo el período.
+La cantidad de días con neblina.
+Mostrar "Quincena lluviosa" si hubo más días de lluvia que días sin lluvia. Mostrar "Quincena húmeda" si llovió en al menos un tercio de los días. De lo contrario mostrar "Quincena seca".
+
+NOTA: La amplitud térmica es la diferencia entre la temperatura máxima y la temperatura mínima.
+NOTA: Se considera neblina a una visibilidad menor a 2 km.
+
+
+
+
+28
+La cuenta corriente de la famosa cantante Lady Lara ha registrado 14 movimientos durante la semana pasada. Por cada movimiento se registró:
+Número de movimiento
+Día
+Tipo ('E' - Extracción / 'D' - Depósito)
+Importe
+
+Existe un registro por movimiento. Se desea calcular e informar:
+El saldo final de la cuenta.
+El porcentaje de movimientos de extracción y el porcentaje de depósito.
+El depósito de mayor importe indicando también día y número de movimiento.
+La cantidad de movimientos del día 10.
+
+
+
+
+29
+Se dispone de la información de los últimos 19 partidos del futbolista Diego Armando Laradona. Por cada partido se registró:
+Número de partido
+Minutos jugados
+Tarjetas amarillas
+Tarjetas rojas
+Goles
+
+Existe un registro para cada partido. Los mismos se encuentran ordenados por número de partido. Se pide calcular e informar:
+La cantidad de partidos que no jugó (partidos con minutos igual a cero)
+La cantidad de partidos que jugó por completo (minutos >= 90)
+El promedio de tarjetas recibidas por partido.
+El número de partido en el que haya convertido mayor cantidad de goles. Indicar también los goles convertidos.
+La mejor racha de partidos convirtiendo goles. Se debe mostrar la mayor cantidad de partidos consecutivos en los que haya convertido.
+
+
+
+
+30
+Dada una lista de 7 números enteros todos distintos entre sí determinar e informar con un cartel aclaratorio si los números primos ingresados en la misma están ordenados de menor a mayor. Los números primos pueden no ser consecutivos, pero sí estar ordenados.
+
+Ejemplo A: 4, 5, 7, 12, 13, 19, 20. Se emite un cartel que diga “Ordenados” ya que los números primos están ordenados: 5, 7, 13, 19.
+
+Ejemplo B: 4, 10, 3, 5, 11, 7, 14. Se emite un cartel que diga “Desordenados” ya que los números primos no están ordenados: 3, 5, 11, 7.
+
+
+
+
+31
+Hacer un programa para ingresar 10 números, luego informar los 2 mayores valores ingresados, aclarando cual es el máximo y cuál es el segundo máximo descartando los números repetidos.
+
+Ejemplo A: 10, 8,12, 78 ,55, 20, 12, 40, 31, 28 el resultado será 78 y 55.
+Ejemplo B: -20, - 25, -3, -8, -50, -45, -20, -22, -15, -11 el resultado será -3 y -8.
+Ejemplo C: 20, 20, 12, 9, 14, 14, 8, 8, 10, 3 el resultado será 20 y 14.
+
+En el ejemplo C el valor 20 aparece dos veces, pero sólo se considera una vez.
+
+
+
+
+32
+Se ingresa una lista de 10 números enteros y se pide determinar si la lista está formada por todos números alternados entre pares e impares o impares y pares.
+Ejemplo A: 8, 7, 10, -5, 20, 3, -10, 5, -10, -7 se lista el cartel “Alternados”.
+Ejemplo B: 5, 12, -5, 10, 13, 40, -11, 6, -7, -6 se lista el cartel “Alternados”.
+Ejemplo C: 5, 5, -5, 10, 10, 40, -11, 6, -7, -6 se lista el cartel “No Alternados”.
+
+
+33
+Hacer un programa para ingresar una lista de 13 números enteros. Se pide luego determinar e informar:
+A) La cantidad de ternas de valores positivos consecutivos.
+B) La cantidad de ternas de valores negativos consecutivos y ordenados en forma creciente.
+
+Ejemplo si la lista fuera: 10, 5, 4, 3, -8, -3, -1, 0, 3, 8, -5, -8, -10 entonces el programa detectará una terna de positivos consecutivos (10, 5, 4) y una terna de negativos consecutivos ordenados (-8, -3, -1)
+
+Nota: Si el número ingresado es cero, no se lo considera ni negativo ni positivo.
+Nota: La terna (-5, -8, -10) no es contabilizada ya que no se encuentra ordenada crecientemente.
+
+
+
+
+

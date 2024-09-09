@@ -13,10 +13,11 @@ int main(){
     cout << "Ingrese un numero (0 para terminar): ";
     cin >> numeroIngresado;
 
-    if (numeroIngresado == 0) {
-        cout << "No se ingresaron numeros." << endl;
-        return 0; // Terminar si el primer número es 0
-    }
+//! por si arranca ingresando 0
+    // if (numeroIngresado == 0) {
+    //     cout << "No se ingresaron numeros." << endl;
+    //     return 0; // Terminar si el primer número es 0
+    // }
 
     // Inicializar el máximo con el primer número ingresado
     maximo = numeroIngresado;

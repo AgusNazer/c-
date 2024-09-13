@@ -1,0 +1,2 @@
+
+        if( suma == numero ){

@@ -1,2 +1,1 @@
-
-        if( suma == numero ){
+por cada numero averiguar si es divisor exacto

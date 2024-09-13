@@ -9,7 +9,7 @@ int main(){
 
 int numero, cantidadPrimos = 0;
 
-for( int i = 1; i <= 10; i++){  // condicion para ingresar 10 numeros
+for( int i = 1; i <= 10; i++){ 
     cout << "Ingrese un numero: ";
     cin >> numero;
 
@@ -17,18 +17,18 @@ for( int i = 1; i <= 10; i++){  // condicion para ingresar 10 numeros
         int cantidadDivisores = 0;
     
     for (int j = 1; j <= numero; j++){
-// por cada numero averiguar si es divisor exacto
+//por cada numero averiguar si es divisor exacto
         if (numero % j == 0){
             cantidadDivisores++; // cuento divisores exactos
         }
     }
-    // averiguar si hay 2 divisores exactos, enconters es priomo
+    // averiguo si hay 2 divisores exactos para ver si es primo
     if (cantidadDivisores == 2){
         cantidadPrimos++;
     }
 
 }
-cout << "Se ingresaron " <<cantidadPrimos <<" numeros primos" <<endl;
+cout << "S ingresaron " <<cantidadPrimos <<" numeros primos" <<endl;
 
     return 0;
 }

@@ -1,6 +1,10 @@
 #include <iostream>
 #include <ctime>
+
+// para rtabajar con archivos
+#include <fstream>
 using namespace std;
+
 /***
    Un menu
       1- Jugar (Adivina un numero) 
@@ -15,92 +19,130 @@ using namespace std;
       muestro menu
       ejecuto accion
       pausa
-   
-
 */
 
+void limpiarPantalla(){
+    system("clear");  // Si estás en Windows, usa system("cls");
+}
+
+void pausar() {
+    cout << "Presiona Enter para continuar...";
+    cin.ignore();
+    cin.get();  // Espera hasta que el usuario presione Enter
+}
+// Función para leer el menor intento desde el archivo
+int leerIntentoMinimo() {
+    ifstream archivo("estadisticas.txt");
+    int intentoMinimo = 0;
+    
+    if (archivo.is_open()) {
+        archivo >> intentoMinimo;
+        archivo.close();
+    }
+    
+    return intentoMinimo;
+}
+// Función para guardar el menor intento en el archivo
+void guardarIntentoMinimo(int intentoMinimo) {
+    ofstream archivo("estadisticas.txt");
+    
+    if (archivo.is_open()) {
+        archivo << intentoMinimo;
+        archivo.close();
+    }
+}
+
+
 int main() {
-   srand(time(0));/// una sola vez en el main
-	int opcion, intentoMinimo=0;
-   
+   srand(time(0)); /// una sola vez en el main
+
+   int opcion;
+   int intentoMinimo = leerIntentoMinimo();
+//    intentoMinimo = 0;
+   int intentos = 0;  // Declara los intentos aquí, para que esté disponible en todo el programa
+
    do{
-      system("cls");
+      limpiarPantalla();
       cout << "MENU PRINCIPAL" << endl;
-      cout << "--------------------"<<endl;
-      cout << "1- Jugar"<<endl;
-      cout << "2- Estadisticas"<<endl;
-      cout << "3- Creditos"<<endl;
-      cout << "0- Salir"<<endl;
-      cout << "--------------------"<<endl;
-      cout << "Opcion: "<<endl;
+      cout << "--------------------" << endl;
+      cout << "1- Jugar" << endl;
+      cout << "2- Estadisticas" << endl;
+      cout << "3- Creditos" << endl;
+      cout << "0- Salir" << endl;
+      cout << "--------------------" << endl;
+      cout << "Opcion: ";
       cin >> opcion;
       
       switch(opcion){
       case 1:{
-            /// TODO: Pedir el nombre
-            system("cls");
-            /// Pensar un numero
+            limpiarPantalla();
             int numeroPensado = 1 + rand() % 100;
-            int numero, intentos;
+            int numero;
+            intentos = 0;  // Resetea el conteo de intentos cada vez que juegas
             
-            intentos = 0;
-            
-            /// pedir el numero al usuario hasta que lo adivine (do while)
-               /// por cada numero cuento los intentos
             do{
                intentos++;
-               cout << "---------"<<endl;
-               cout << "Intento #"<<intentos << endl;
+               cout << "---------" << endl;
+               cout << "Intento #" << intentos << endl;
                cout << "Ingrese numero: ";
                cin >> numero;
                
-               if(intentos >=3){
+               if(intentos >= 3){
                   if(numero > numeroPensado){
-                     cout << "El numero pensado es mas chico."<<endl;
+                     cout << "El numero pensado es mas chico." << endl;
                   }
                   else if(numero < numeroPensado){
-                     cout << "El numero pensado es mas grande."<<endl;
+                     cout << "El numero pensado es mas grande." << endl;
                   }
                }
-              
             }while(numero != numeroPensado);
             
-            cout << "Adivinaste el numero en el intento #" << intentos  << endl;
+            cout << "¡Adivinaste el número en el intento #" << intentos << "!" << endl;
             
-            /// algorimo de busqueda de menor
-            if(intentoMinimo==0 || intentos < intentoMinimo){
+            // Algoritmo para buscar el menor intento
+            if(intentoMinimo == 0 || intentos < intentoMinimo){
                intentoMinimo = intentos;
+               // funcion para guardar intento minimo en un archivo
+               guardarIntentoMinimo(intentoMinimo);
             }
          }
          break;
+         
       case 2:
-         /// TODO: Muestre el numero que adivino
-         system("cls");
+         limpiarPantalla();
          if(intentoMinimo > 0){
-            cout << "El menor intento hasta ahora es: #" << intentoMinimo << endl;
+
+            // cout << "El numero de intentos totales es de " << intentos << " intentos" << endl; //corregir
+            cout << "El menor intento hasta ahora es el intento #" << intentoMinimo << endl;
          }
          else{
-            cout << "Aun no se ha jugado..."<<endl;
+            cout << "Aun no se ha jugado..." << endl;
          }
          break;
-      case 3:
          
-        system("cls");
-        cout << "Silent Gil" << endl;
-        cout << "Es un excelente juego donde debes ser mas inteligente que la computadora"<<endl;
-        cout << "*********************"<<endl;
-        cout << "*   TEAM SILENSIO   *"<<endl;
-        cout << "*********************"<<endl;
-        cout << endl << endl;
-        break;
+      case 3:
+         limpiarPantalla();
+         cout << "Silent Gil" << endl;
+         cout << "Es un excelente juego donde debes ser más inteligente que la computadora" << endl;
+         cout << "*********************" << endl;
+         cout << "*   TEAM SILENCIO   *" << endl;
+         cout << "*********************" << endl;
+         cout << endl << endl;
+         break;
+         
       case 0:
          cout << "Gracias por jugar!!! " << endl;
          break;
+         
+      default:
+         cout << "Opción no válida, por favor intenta de nuevo." << endl;
+         break;
       }
-      cout << "Presione cualquier tecla para continuar...";
-      system("pause>nul");
       
-   }while(opcion != 0);
+      // Pausar antes de limpiar la pantalla
+      pausar();
+      
+   } while(opcion != 0);
    
-	return 0;
+   return 0;
 }

@@ -17,6 +17,11 @@ int main() {
         maximoImpar = 0; // Reiniciar el máximo impar para cada grupo
         bool hayPar = false; // Para verificar si hay al menos un número par
         bool hayImpar = false; // Para verificar si hay al menos un número impar
+        int totalNumeros = 0;
+        int cantidadPositivos = 0;
+        int cantidadNegativos = 0;
+        float porcentajePositivos = 0.0;
+        float porcentajeNegativos = 0.0;
 
         cout << "Grupo " << i << " (Ingrese numeros, 0 para finalizar el grupo):" << endl;
         
@@ -41,8 +46,24 @@ int main() {
                     hayImpar = true;
                 }
             }
+            totalNumeros++; 
+            // porcentajes
+            if(numero > 0){
+                cantidadPositivos++;
+            }else{
+                if(numero < 0) {
+                    cantidadNegativos++;
+            }
+            }
         }
-
+        // mostrar porcentajes
+        if(totalNumeros > 0){
+            porcentajePositivos = float(cantidadPositivos) / totalNumeros * 100;
+            porcentajeNegativos = float(cantidadNegativos) / totalNumeros * 100;
+        }
+        cout << "El porcentaje de numeros positivos es de " <<porcentajePositivos <<" % " << endl;
+        cout << "El porcentaje de numeros negativos es de " <<porcentajeNegativos <<" % " << endl;
+        
         // Mostramos los máximos de cada grupo
         if (hayPar) {
             cout << "Maximo par en el grupo " << i << ": " << maximoPar << endl;

@@ -48,7 +48,7 @@ int main() {
 
     // calculos para mostrar
     if (contadorEstaciones > 0) {
-        float promedioGasoil = static_cast<float>(totalGasoilVendido) / contadorEstaciones;
+        float promedioGasoil = float(totalGasoilVendido) / contadorEstaciones;
 
         cout << "Cantdad de estaciones: " << contadorEstaciones << endl;
         cout << "Estacion con mayor venta de nafta: " <<"estacion numero: " << codigoMaxNafta << " con " << maxNaftaVendida << " litros vendidos" << endl;

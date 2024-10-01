@@ -1,90 +1,109 @@
-# include<iostream>
+#include<iostream>
 using namespace std;
 
 int main()
 {
-///variables importantes
-    int nroart,dia,preciocost,preciovent,cantartvend;
-///punto A
-    int gananciamax,ganancia,cantmax,nroartmax;
-    gananciamax=0;
-///punto C
-    int totalventas,ventasprimerasemana,porcentajeprimersemana;
-    totalventas=ventasprimerasemana=porcentajeprimersemana=0;
+    /// Variables importantes
+    int nroart, dia, preciocost, preciovent, cantartvend;
+    /// Punto A
+    int gananciamax, ganancia, cantmax, nroartmax;
+    gananciamax = 0;
+    /// Punto C
+    int totalventas, ventasprimerasemana, porcentajeprimersemana;
+    totalventas = ventasprimerasemana = porcentajeprimersemana = 0;
+    /// Punto D
+    int ventas_art5_dia16 = 0;  // Variable para llevar cuenta de las ventas del artículo 5 en el día 16
 
-///pedido de datos
-    cout<<"ingrese numero de articulo: ";
-    cin>>nroart;
-    cout<<"ingrese dia: ";
-    cin>>dia;
-    cout<<"ingrese precio de costo: $";
-    cin>>preciocost;
-    cout<<"ingrese precio de venta: $";
-    cin>>preciovent;
-    cout<<"ingrese cantidad de articulos vendidos: ";
-    cin>>cantartvend;
+    /// Pedido de datos
+    cout << "ingrese numero de articulo: ";
+    cin >> nroart;
+    cout << "ingrese dia: ";
+    cin >> dia;
+    cout << "ingrese precio de costo: $";
+    cin >> preciocost;
+    cout << "ingrese precio de venta: $";
+    cin >> preciovent;
+    cout << "ingrese cantidad de articulos vendidos: ";
+    cin >> cantartvend;
 
-///corte de programa(con un 0)
-    while(nroart>0)
+    /// Corte de programa (con un 0)
+    while (nroart > 0)
     {
+        /// Corte de control
+        int artact = nroart;
+        cout << endl << "articulo actual es: " << artact << endl << endl;
 
-///corte de control
-        int artact=nroart;
-        cout<<endl<<"articulo actual es: "<<artact<<endl<<endl;
-
-        while(nroart==artact)
+        while (nroart == artact)
         {
-///punto A
-            ganancia=(preciovent-preciocost)*cantartvend;
+            /// Punto A
+            ganancia = (preciovent - preciocost) * cantartvend;
 
-            if(gananciamax==0)
-            {
-                gananciamax=ganancia;
-                cantmax=cantartvend;
-                nroartmax=nroart;
+            if (gananciamax == 0){
+                gananciamax = ganancia;
+                cantmax = cantartvend;
+                nroartmax = nroart;
             }
-            if(gananciamax<ganancia)
-            {
-                gananciamax=ganancia;
-                cantmax=cantartvend;
-                nroartmax=nroart;
+            if (gananciamax < ganancia){
+                gananciamax = ganancia;
+                cantmax = cantartvend;
+                nroartmax = nroart;
             }
-            if(gananciamax==ganancia)
-            {
-                if(cantartvend>cantmax)
+            if (gananciamax == ganancia){
+                if (cantartvend > cantmax)
                 {
-                    cantmax=cantartvend;
-                    nroartmax=nroart;
+                    cantmax = cantartvend;
+                    nroartmax = nroart;
                 }
             }
 
-///punto C
-            totalventas+=cantartvend;
-            if(dia>=1&&dia<=7)
-            {
-                ventasprimerasemana+=cantartvend;
+            /// Punto C
+            totalventas += cantartvend;
+            if (dia >= 1 && dia <= 7){
+                ventasprimerasemana += cantartvend;
             }
-            if(ventasprimerasemana>0){
-                porcentajeprimersemana=(ventasprimerasemana*100)/totalventas;
+            if (ventasprimerasemana > 0){
+                porcentajeprimersemana = (ventasprimerasemana * 100) / totalventas;
             }
 
-            cout<<"ingrese numero de articulo: ";
-            cin>>nroart;
-            if(nroart==0){break;}
-            cout<<"ingrese dia: ";
-            cin>>dia;
-            cout<<"ingrese precio de costo: $";
-            cin>>preciocost;
-            cout<<"ingrese precio de venta: $";
-            cin>>preciovent;
-            cout<<"ingrese cantidad de articulos vendidos: ";
-            cin>>cantartvend;
+            /// punto D: 
+            // La cantidad de ventas del artículo 5 el día 16 del mes. 
+            // De no detectar ventas, indicarlo con un cartel aclaratorio.
+            if (nroart == 5 && dia == 16){
+                ventas_art5_dia16 += cantartvend;  
+            }
+
+            /// Solicitar nuevos datos
+            cout << "ingrese numero de articulo: ";
+            cin >> nroart;
+            if (nroart == 0) { break; }
+            cout << "ingrese dia: ";
+            cin >> dia;
+            cout << "ingrese precio de costo: $";
+            cin >> preciocost;
+            cout << "ingrese precio de venta: $";
+            cin >> preciovent;
+            cout << "ingrese cantidad de articulos vendidos: ";
+            cin >> cantartvend;
         }
-/* extra */ cout<<"cantidad de articulos vendidos hasta ahora es: "<<totalventas<<endl;
+        /* extra */ 
+        cout << "cantidad de articulos vendidos hasta ahora es: " << totalventas << endl;
     }
-cout<<"su ganancia maxima es: $"<<gananciamax<<" del articulo "<<nroartmax<<endl<<endl;
-cout<<" porcentaje de ventas de la primer semana es "<<porcentajeprimersemana<<"%"<<endl;
-   cout<<endl;
-   system ("pause");
-       return 0;
+
+    // Mostrar resultados finales
+    cout << "su ganancia maxima es: $" << gananciamax << " del articulo " << nroartmax << endl << endl;
+    cout << " porcentaje de ventas de la primer semana es " << porcentajeprimersemana << "%" << endl;
+
+    /// Punto D: 
+   // De no detectar ventas, 
+    // indicarlo con un cartel aclaratorio.
+    if (ventas_art5_dia16 > 0){
+        cout << "La cantidad de ventas del articulo 5 el dia 16 es: " << ventas_art5_dia16 << endl;
+    }
+    else{
+        cout << "No se detectaron ventas del articulo 5 el dia 16." << endl;
+    }
+
+    cout << endl;
+    system("pause");
+    return 0;
 }

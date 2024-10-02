@@ -55,6 +55,15 @@ int main()
                     nroartmax = nroart;
                 }
             }
+            //Punto B
+
+            int Quno = 0;
+            if(cantartvend > 0){
+                if(dia >=1 && dia <15){
+                    Quno+= cantartvend;
+                }
+                cout << "La cantiadd vendida en la quincena numero: " <<Quno;
+            }
 
             /// Punto C
             totalventas += cantartvend;

@@ -14,6 +14,8 @@ int main()
     /// Punto D
     int ventas_art5_dia16 = 0;  // Variable para llevar cuenta de las ventas del artículo 5 en el día 16
 
+/// Punto E
+    int gananciaFinDeSemana = 0;
     /// Pedido de datos
     cout << "ingrese numero de articulo: ";
     cin >> nroart;
@@ -80,6 +82,11 @@ int main()
             if (nroart == 5 && dia == 16){
                 ventas_art5_dia16 += cantartvend;  
             }
+            // punto E
+             ///Calcular la ganancia del primer fin de seman
+            if (dia == 6 || dia == 7) {
+                gananciaFinDeSemana += ganancia;
+            }
 
             /// Solicitar nuevos datos
             cout << "ingrese numero de articulo: ";
@@ -111,6 +118,8 @@ int main()
     else{
         cout << "No se detectaron ventas del articulo 5 el dia 16." << endl;
     }
+    // Punto E
+     cout << "La ganancia total del primer fin de semana (días 6 y 7) es: $" << gananciaFinDeSemana << endl;
 
     cout << endl;
     system("pause");

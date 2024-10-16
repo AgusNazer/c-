@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 
 
-int sumVector[3];
+int sumVector[10];
 int suma = 0;
 
 for( int i = 0; i < 10; i++ ){
